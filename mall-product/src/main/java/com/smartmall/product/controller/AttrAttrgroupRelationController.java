@@ -3,10 +3,9 @@ package com.smartmall.product.controller;
 import com.smartmall.product.entity.AttrAttrgroupRelationEntity;
 import com.smartmall.product.service.AttrAttrgroupRelationService;
 import com.stmartmall.common.utils.PageUtils;
-import com.stmartmall.common.utils.R;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
+import com.stmartmall.common.utils.R;
 import java.util.Arrays;
 import java.util.Map;
 
@@ -17,7 +16,7 @@ import java.util.Map;
  *
  * @author jiale
  * @email jiale@gmail.com
- * @date 2020-10-24 22:49:27
+ * @date 2020-11-11 21:18:45
  */
 @RestController
 @RequestMapping("product/attrattrgrouprelation")

@@ -1,19 +1,15 @@
 package com.smartmall.product.controller;
 
-import java.util.Arrays;
-import java.util.Map;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-
 import com.smartmall.product.entity.CategoryEntity;
 import com.smartmall.product.service.CategoryService;
 import com.stmartmall.common.utils.PageUtils;
 import com.stmartmall.common.utils.R;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
 
 
 
@@ -22,7 +18,7 @@ import com.stmartmall.common.utils.R;
  *
  * @author jiale
  * @email jiale@gmail.com
- * @date 2020-10-24 22:49:27
+ * @date 2020-11-11 21:18:45
  */
 @RestController
 @RequestMapping("product/category")
@@ -30,6 +26,13 @@ public class CategoryController {
     @Autowired
     private CategoryService categoryService;
 
+    @RequestMapping("/list/tree")
+    //@RequiresPermissions("product:category:list")
+    public R listTree(){
+        List<CategoryEntity> categoryEntities = categoryService.listWithTree();
+
+        return R.ok().put("page", categoryEntities);
+    }
     /**
      * 列表
      */
@@ -77,12 +80,14 @@ public class CategoryController {
 
     /**
      * 删除
+     * RequestBody 只能用在post请求里，因为get请求是没有请求体的
      */
     @RequestMapping("/delete")
     //@RequiresPermissions("product:category:delete")
     public R delete(@RequestBody Long[] catIds){
-		categoryService.removeByIds(Arrays.asList(catIds));
+//		categoryService.removeByIds(Arrays.asList(catIds));
 
+		categoryService.removeMenusByIds(Arrays.asList(catIds));
         return R.ok();
     }
 

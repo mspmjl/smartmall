@@ -1,19 +1,14 @@
 package com.smartmall.product.controller;
 
-import java.util.Arrays;
-import java.util.Map;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-
 import com.smartmall.product.entity.AttrEntity;
 import com.smartmall.product.service.AttrService;
 import com.stmartmall.common.utils.PageUtils;
 import com.stmartmall.common.utils.R;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Arrays;
+import java.util.Map;
 
 
 
@@ -22,7 +17,7 @@ import com.stmartmall.common.utils.R;
  *
  * @author jiale
  * @email jiale@gmail.com
- * @date 2020-10-24 22:49:27
+ * @date 2020-11-11 21:18:45
  */
 @RestController
 @RequestMapping("product/attr")

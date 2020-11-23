@@ -22,7 +22,7 @@ import com.stmartmall.common.utils.R;
  *
  * @author jiale
  * @email jiale@gmail.com
- * @date 2020-10-24 22:49:27
+ * @date 2020-11-11 21:18:45
  */
 @RestController
 @RequestMapping("product/skuimages")
