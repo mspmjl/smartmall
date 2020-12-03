@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.smartmall.coupon.entity.SkuBoundsEntity;
 import com.smartmall.coupon.service.SkuBoundsService;
-import com.stmartmall.common.utils.PageUtils;
-import com.stmartmall.common.utils.R;
+import com.smartmall.common.utils.PageUtils;
+import com.smartmall.common.utils.R;
 
 
 

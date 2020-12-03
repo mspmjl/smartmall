@@ -6,7 +6,7 @@
  * 版权所有，侵权必究！
  */
 
-package com.stmartmall.common.utils;
+package com.smartmall.common.utils;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 

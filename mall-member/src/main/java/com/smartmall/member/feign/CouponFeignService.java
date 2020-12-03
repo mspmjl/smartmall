@@ -1,6 +1,6 @@
 package com.smartmall.member.feign;
 
-import com.stmartmall.common.utils.R;
+import com.smartmall.common.utils.R;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;

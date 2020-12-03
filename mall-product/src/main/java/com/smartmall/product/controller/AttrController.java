@@ -2,8 +2,8 @@ package com.smartmall.product.controller;
 
 import com.smartmall.product.entity.AttrEntity;
 import com.smartmall.product.service.AttrService;
-import com.stmartmall.common.utils.PageUtils;
-import com.stmartmall.common.utils.R;
+import com.smartmall.common.utils.PageUtils;
+import com.smartmall.common.utils.R;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

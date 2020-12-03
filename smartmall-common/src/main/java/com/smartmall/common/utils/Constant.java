@@ -6,7 +6,7 @@
  * 版权所有，侵权必究！
  */
 
-package com.stmartmall.common.utils;
+package com.smartmall.common.utils;
 
 /**
  * 常量

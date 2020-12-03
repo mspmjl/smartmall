@@ -6,8 +6,8 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.smartmall.product.dao.CategoryDao;
 import com.smartmall.product.entity.CategoryEntity;
 import com.smartmall.product.service.CategoryService;
-import com.stmartmall.common.utils.PageUtils;
-import com.stmartmall.common.utils.Query;
+import com.smartmall.common.utils.PageUtils;
+import com.smartmall.common.utils.Query;
 import org.springframework.stereotype.Service;
 
 import java.util.Comparator;

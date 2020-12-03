@@ -16,14 +16,22 @@ spring:
           ## lb 负载均衡 默认都到rerenfast
           uri : lb://mall-product
           predicates:
-          ##前端项目 都带/api
+          ## 都带/product
            - Path=/api/product/**
           filters:
           ## 路径重写
           - RewritePath=/api/product/(?<segment>.*),/product/$\{segment}
 
+        - id : product-third-party
+          uri : lb://mall-third-party
+          predicates:
+          ## 都带/product
+           - Path=/api/thirdparty/**
+          filters:
+          ## 路径重写
+          - RewritePath=/api/thirdparty/(?<segment>.*),/$\{segment}
+
         - id : admin-route
-          ## lb 负载均衡 默认都到rerenfast
           uri : lb://renren-fast
           predicates:
           ##前端项目 都带/api

@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.smartmall.member.entity.MemberLoginLogEntity;
 import com.smartmall.member.service.MemberLoginLogService;
-import com.stmartmall.common.utils.PageUtils;
-import com.stmartmall.common.utils.R;
+import com.smartmall.common.utils.PageUtils;
+import com.smartmall.common.utils.R;
 
 
 

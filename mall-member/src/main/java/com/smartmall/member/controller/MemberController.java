@@ -3,8 +3,8 @@ package com.smartmall.member.controller;
 import com.smartmall.member.entity.MemberEntity;
 import com.smartmall.member.feign.CouponFeignService;
 import com.smartmall.member.service.MemberService;
-import com.stmartmall.common.utils.PageUtils;
-import com.stmartmall.common.utils.R;
+import com.smartmall.common.utils.PageUtils;
+import com.smartmall.common.utils.R;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

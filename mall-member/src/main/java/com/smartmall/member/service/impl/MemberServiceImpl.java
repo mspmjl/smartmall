@@ -6,8 +6,8 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.smartmall.member.dao.MemberDao;
 import com.smartmall.member.entity.MemberEntity;
 import com.smartmall.member.service.MemberService;
-import com.stmartmall.common.utils.PageUtils;
-import com.stmartmall.common.utils.Query;
+import com.smartmall.common.utils.PageUtils;
+import com.smartmall.common.utils.Query;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;

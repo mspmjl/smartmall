@@ -1,15 +1,18 @@
 package com.smartmall.product.controller;
 
+import com.smartmall.common.utils.PageUtils;
+import com.smartmall.common.utils.R;
+import com.smartmall.common.valid.AddGroup;
+import com.smartmall.common.valid.UpdateGroup;
 import com.smartmall.product.entity.BrandEntity;
 import com.smartmall.product.service.BrandService;
-import com.stmartmall.common.utils.PageUtils;
-import com.stmartmall.common.utils.R;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Arrays;
 import java.util.Map;
-
 
 
 /**
@@ -19,6 +22,7 @@ import java.util.Map;
  * @email jiale@gmail.com
  * @date 2020-11-11 21:18:45
  */
+@Slf4j
 @RestController
 @RequestMapping("product/brand")
 public class BrandController {
@@ -30,10 +34,10 @@ public class BrandController {
      */
     @RequestMapping("/list")
     //@RequiresPermissions("product:brand:list")
-    public R list(@RequestParam Map<String, Object> params){
+    public R list(@RequestParam Map<String, Object> params) {
         PageUtils page = brandService.queryPage(params);
-
-        return R.ok().put("page", page);
+        log.info("=========================list: ",page.getList());
+        return R.ok().put("page", page.getList());
     }
 
 
@@ -42,8 +46,8 @@ public class BrandController {
      */
     @RequestMapping("/info/{brandId}")
     //@RequiresPermissions("product:brand:info")
-    public R info(@PathVariable("brandId") Long brandId){
-		BrandEntity brand = brandService.getById(brandId);
+    public R info(@PathVariable("brandId") Long brandId) {
+        BrandEntity brand = brandService.getById(brandId);
 
         return R.ok().put("brand", brand);
     }
@@ -53,8 +57,8 @@ public class BrandController {
      */
     @RequestMapping("/save")
     //@RequiresPermissions("product:brand:save")
-    public R save(@RequestBody BrandEntity brand){
-		brandService.save(brand);
+    public R save(@Validated(value = AddGroup.class) @RequestBody BrandEntity brand) {
+        brandService.save(brand);
 
         return R.ok();
     }
@@ -64,8 +68,8 @@ public class BrandController {
      */
     @RequestMapping("/update")
     //@RequiresPermissions("product:brand:update")
-    public R update(@RequestBody BrandEntity brand){
-		brandService.updateById(brand);
+    public R update(@Validated(value = UpdateGroup.class) @RequestBody BrandEntity brand) {
+        brandService.updateById(brand);
 
         return R.ok();
     }
@@ -75,8 +79,8 @@ public class BrandController {
      */
     @RequestMapping("/delete")
     //@RequiresPermissions("product:brand:delete")
-    public R delete(@RequestBody Long[] brandIds){
-		brandService.removeByIds(Arrays.asList(brandIds));
+    public R delete(@RequestBody Long[] brandIds) {
+        brandService.removeByIds(Arrays.asList(brandIds));
 
         return R.ok();
     }

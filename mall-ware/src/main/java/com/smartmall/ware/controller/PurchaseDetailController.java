@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.smartmall.ware.entity.PurchaseDetailEntity;
 import com.smartmall.ware.service.PurchaseDetailService;
-import com.stmartmall.common.utils.PageUtils;
-import com.stmartmall.common.utils.R;
+import com.smartmall.common.utils.PageUtils;
+import com.smartmall.common.utils.R;
 
 
 

@@ -2,8 +2,8 @@ package com.smartmall.coupon.controller;
 
 import com.smartmall.coupon.entity.CategoryBoundsEntity;
 import com.smartmall.coupon.service.CategoryBoundsService;
-import com.stmartmall.common.utils.PageUtils;
-import com.stmartmall.common.utils.R;
+import com.smartmall.common.utils.PageUtils;
+import com.smartmall.common.utils.R;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
